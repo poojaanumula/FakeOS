@@ -51,8 +51,42 @@
 //styling menu
 .menu{
     width:180px;
-    height:400px;
+    height:410px;
     background-color: rgb(196, 188, 188);
     bottom: 0;
     position: absolute;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    padding-top: 10px;
+    display: none;
+}
+//styling blue 
+.menu-bar-side{
+    width:20px;
+    height:100%;
+    background-color: blue;
+}
+
+.iconWithNames{
+    display: flex;
+    align-items: center;
+    gap:10px;
+
+
+    img{
+     
+        width:35px;
+        height: 35px;
+        padding:4px;
+     
+     
+    }
+    p{
+        text-align: center;
+        font-size: 14px;
+        font-weight:500;
+    }
 }
