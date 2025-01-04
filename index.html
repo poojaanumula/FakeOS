@@ -9,59 +9,87 @@
 </head>
 <body>
    <main class="background-image">
-    <div class="menu">
-        <div class="menu-bar-side"></div>
-        <div style="display: flex;flex-direction: column;">
-            <div class="iconWithNames">
-                <img src="./images/program.png">
-                <p>Programs</p>
+    <div class="parent">
+        <div class="child">
+            <div class="menu">
+                <div class="combined">
+                    <!-- the blue sidebar-->
+                    <div class="menu-bar-side"></div>
+                    <!--Menu starts here-->
+                    <div class="iconPlusNames">
+                        <div class="iconWithNames" onclick="myfunc('Programs', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/program.png">
+                            <p>Programs</p>
+                        </div>
+                        <div class="iconWithNames poo" onclick="myfunc('Photos', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/img icon.png">
+                            <p>Photos</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Applications', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/applications.png">
+                            <p>Applications</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Games', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/game_hearts.png">
+                            <p>Games</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Settings', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/settings.png">
+                            <p>Settings</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Find', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/find.png">
+                            <p>Find</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Help', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/help.png">
+                            <p>Help</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Run', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/run2.png">
+                            <p>Run</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Logoff', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/key.png">
+                            <p>Log off</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Shutdown','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s' )">
+                            <img src="./images/shutdown.png">
+                            <p>Shutdown</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="iconWithNames">
-                <img src="./images/img icon.png">
-                <p>Photos</p>
-            </div>
-            <div class="iconWithNames">
-                <img src="./images/applications.png">
-                <p>Applications</p>
-            </div>
-            <div class="iconWithNames">
-                <img src="./images/game_hearts.png">
-                <p>Games</p>
-            </div>
-            <div class="iconWithNames">
-                <img src="./images/settings.png">
-                <p>Settings</p>
-            </div>
-            <div class="iconWithNames">
-                <img src="./images/find.png">
-                <p>Find</p>
-            </div>
-            <div class="iconWithNames">
-                <img src="./images/help.png">
-                <p>Help</p>
-            </div>
-            <div class="iconWithNames">
-                <img src="./images/run2.png">
-                <p>Run</p>
-            </div>
-            <div class="iconWithNames">
-                <img src="./images/key.png">
-                <p>Log off</p>
-            </div>
-            <div class="iconWithNames">
-                <img src="./images/shutdown.png">
-                <p>Shutdown</p>
-            </div>
-        </div>
-     
+             <section class="bottom" style="display: flex; justify-content: space-between;">
+                   <div class="bottom--start--icon">
+                        <img src="./images/start.png" class="bottom--start--icon__image">
+                        <p class="bottom--start--icon__text">Start</p>
+                   </div>
+                  <div class="showTime">Ok</div>
+             </section>
+         </div>
+      
     </div>
-     <section class="bottom" style="display: flex; justify-content: space-between;">
-           <div class="bottom--start--icon">
-                <img src="./images/start.png" class="bottom--start--icon__image">
-                <p class="bottom--start--icon__text">Start</p>
-           </div>
-          <div>Ok</div>
-     </section>
+   <!-- MODAL-->
+   <div style="width: 700px;height: 400px;background-color:rgba(192,192,192,255); display: none; position:absolute;align-self:center;top:20%;left:30%;" class="modal">
+   <div style="display: flex; justify-content: space-between;background-color:rgba(10,86,180,255);"> 
+     <p class="text" ></p>
+     <span style="margin: 10px;cursor: pointer;color: white;" class="close">X</span>
+   </div>
+   <!--Modal secondMenu-->
+   <div style="display: flex;align-items: left;padding:10px;border: 1px solid grey;" class="secondMenu">
+    <p>File</p>
+    <p>Edit</p>
+    <p>View</p>
+    <p>Go</p>
+    <p>Favourites</p>
+    <p>Tools</p>
+    <p>Help</p>
+   </div>
+   <!--Modal Description-->
+   <div class="titleDescription"></div>
+ </div>
    </main>
+  
 </body>
 </html>

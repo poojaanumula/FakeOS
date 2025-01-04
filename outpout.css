@@ -107,26 +107,15 @@
 }
 
 .iconWithNames:hover p {
-  color: blue;
+  color: rgb(206, 73, 73);
 }
 
 .text {
   color: white;
   font-size: 17px;
   font-weight: bold;
-  padding: 10px;
+  padding: 20px;
   font-family: "Times New Roman", Times, serif;
 }
 
-.secondMenu p {
-  margin: 4px;
-  color: rgb(100, 96, 96);
-}
-
-.titleDescription {
-  border: 1px solid gray;
-  margin: 30px;
-  padding: 30px;
-}
-
-/*# sourceMappingURL=output.css.map */
+/*# sourceMappingURL=outpout.css.map */

@@ -3,7 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+.parent{
+    position: absolute;
+}
 
+.child{
+    position: absolute;
+}
+.main{
+    position: relative;
+}
+.close{
+    &:hover{
+        background-color: rgb(127, 207, 232);
+    }
+}
 // Main Backgroung Image Styling...
 .background-image{
  width: 100%;
@@ -11,6 +25,7 @@
  background-image: url('./images/windowss.jpg');
  background-size: cover;
  margin: auto;
+ position: relative;
 }
 
 //styling footer
@@ -26,11 +41,12 @@
 //styling footer start button section
 .bottom--start--icon{
   display: flex;
-  border: 3px solid black;
+
   width:100px;
   padding:2px;
   text-align: center;
   align-content: center;
+  cursor: pointer;
 
 }
 
@@ -52,29 +68,38 @@
 .menu{
     width:180px;
     height:410px;
-    background-color: rgb(196, 188, 188);
-    bottom: 0;
-    position: absolute;
+    background-color: rgb(235, 229, 229);
     border-left: 2px solid white;
+    cursor: pointer;
     border-top: 2px solid white;
     display: flex;
-    flex-direction: row;
     padding: 2px;
     padding-top: 10px;
+    bottom: 0;
+    position: fixed;
     display: none;
 }
+
 //styling blue 
 .menu-bar-side{
     width:20px;
-    height:100%;
+    height:96%;
     background-color: blue;
+    position: absolute;
+    
 }
+.iconPlusNames{
+    display: flex;
+    flex-direction: column;
 
+    position: absolute;
+    margin-left: 20px;
+}
 .iconWithNames{
     display: flex;
     align-items: center;
     gap:10px;
-
+    cursor: pointer;
 
     img{
      
@@ -89,4 +114,28 @@
         font-size: 14px;
         font-weight:500;
     }
+}
+.iconWithNames:hover{
+    p{
+        color:blue;
+    }
+}
+.text{
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.secondMenu{
+    p{
+        margin:4px;
+        color:rgb(100, 96, 96);
+    }
+}
+.titleDescription{
+ 
+    border:1px solid gray;
+    margin:30px;
+    padding: 30px;
 }
