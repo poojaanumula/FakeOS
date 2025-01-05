@@ -17,7 +17,7 @@
 }
 
 .close:hover {
-  background-color: rgb(127, 207, 232);
+  background-color: gray;
 }
 
 .background-image {
@@ -75,6 +75,14 @@
   display: none;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 .menu-bar-side {
   width: 20px;
   height: 96%;
@@ -118,6 +126,12 @@
   font-family: "Times New Roman", Times, serif;
 }
 
+.secondMenu {
+  display: flex;
+  align-items: left;
+  padding: 10px;
+  border: 1px solid grey;
+}
 .secondMenu p {
   margin: 4px;
   color: rgb(100, 96, 96);
@@ -127,6 +141,28 @@
   border: 1px solid gray;
   margin: 30px;
   padding: 30px;
+}
+
+span {
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.modal {
+  width: 700px;
+  height: 400px;
+  background-color: rgb(229, 226, 226);
+  display: none;
+  position: absolute;
+  align-self: center;
+  top: 20%;
+  left: 30%;
+}
+
+.showTime {
+  margin-right: 10px;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=output.css.map */

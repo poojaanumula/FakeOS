@@ -1,21 +1,25 @@
 
 
+// function to open a menu
 const openMenu= ()=>{
+    //menu.classList.toggle('show')
     menu.style.display = "block"
-    
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target === menu) {
-      menu.style.display = "hidden";
-    }
-  }
 }
 
 const startIcon = document.querySelector(".bottom--start--icon");
 const menu = document.querySelector(".menu");
+const show= document.querySelector('.show')
+const hide = document.querySelector('.hide')
+
 // calling openMenu function to open menu 
 startIcon.addEventListener('click', openMenu)
 
+// to close menu if we click it outside
+window.onclick = function(event) {
+    if (!menu.contains(event.target&& menu.style.display == "block")) {
+               menu.style.display="none"
+    }
+  }
 const showTime = document.querySelector(".showTime")
 
 // Defining Api function..
@@ -36,12 +40,15 @@ const myApi = async()=>{
 }
 //Calling API for displaying Time
 myApi()
+
 const modal = document.querySelector('.modal')
 const close= document.querySelector('.close')
 const titleDisc = document.querySelector('.titleDescription')
 close.addEventListener('click', ()=>{
 modal.style.display="none"
 })
+
+// declaring myFunc to dynamically display content in modal.
 function myfunc(a,b){
     const text =  document.querySelector('.text');
     text.textContent = `${a}`
