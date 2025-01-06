@@ -151,7 +151,7 @@ span {
 
 .modal {
   width: 700px;
-  height: 400px;
+  height: 270px;
   background-color: rgb(229, 226, 226);
   display: none;
   position: absolute;
@@ -163,6 +163,10 @@ span {
 .showTime {
   margin-right: 10px;
   font-size: 18px;
+}
+
+#menuCloseSpan:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -159,7 +159,7 @@ span{
 }
 .modal{
     width: 700px;
-    height: 400px;
+    height: 270px;
     //background-color:rgba(192,192,192,255); 
     background-color: rgb(229, 226, 226);
     display: none; 
@@ -171,4 +171,7 @@ span{
 .showTime{
     margin-right: 10px;
     font-size: 18px;
+}
+#menuCloseSpan:hover{
+cursor: pointer;
 }

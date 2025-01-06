@@ -1,11 +1,8 @@
-
-
 // function to open a menu
 const openMenu= ()=>{
     //menu.classList.toggle('show')
     menu.style.display = "block"
 }
-
 const startIcon = document.querySelector(".bottom--start--icon");
 const menu = document.querySelector(".menu");
 const show= document.querySelector('.show')
@@ -14,16 +11,21 @@ const hide = document.querySelector('.hide')
 // calling openMenu function to open menu 
 startIcon.addEventListener('click', openMenu)
 
-// to close menu if we click it outside
-window.onclick = function(event) {
-    if (!menu.contains(event.target&& menu.style.display == "block")) {
-               menu.style.display="none"
+
+// to close menu if we click
+
+const closeMenu = document.querySelector('#menuCloseSpan')
+closeMenu.addEventListener('click', ()=>{
+    if(menu.style.display="block")
+    {
+        menu.style.display="none"
     }
-  }
+})
+
 const showTime = document.querySelector(".showTime")
 
 // Defining Api function..
-const myApi = async()=>{
+ const myApi = async()=>{
     try{
         const res = await fetch(`https://timeapi.io/api/time/current/zone?timeZone=Australia%2FSydney`);
         if (!res.ok) {
