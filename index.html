@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <script src="./script.js" defer></script>
+    <title>Fake OS</title>
+</head>
+<body>
+   <main class="background-image">
+    <div class="parent">
+        <div class="child">
+            <div class="menu">
+                <div class="combined">
+                    <span id="menuCloseSpan">x</span>
+                    <!-- the blue sidebar-->
+                    <div class="menu-bar-side"></div>
+                    <!--Menu starts here-->
+                    <div class="iconPlusNames">
+                        <div class="iconWithNames" onclick="myfunc('Programs', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/program.png">
+                            <p>Programs</p>
+                        </div>
+                        <div class="iconWithNames poo" onclick="myfunc('Photos', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/img icon.png">
+                            <p>Photos</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Applications', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/applications.png">
+                            <p>Applications</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Games', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/game_hearts.png">
+                            <p>Games</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Settings', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/settings.png">
+                            <p>Settings</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Find', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/find.png">
+                            <p>Find</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Help', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/help.png">
+                            <p>Help</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Run', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/run2.png">
+                            <p>Run</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Logoff', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s')">
+                            <img src="./images/key.png">
+                            <p>Log off</p>
+                        </div>
+                        <div class="iconWithNames" onclick="myfunc('Shutdown','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s' )">
+                            <img src="./images/shutdown.png">
+                            <p>Shutdown</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <section class="bottom">
+                   <div class="bottom--start--icon">
+                        <img src="./images/start.png" class="bottom--start--icon__image">
+                        <p class="bottom--start--icon__text">Start</p>
+                   </div>
+                  <div class="showTime"></div>
+             </section>
+        </div>
+    </div>
+   <!-- MODAL-->
+   <div class="modal">
+        <div class="modalBody"> 
+            <p class="text" ></p>
+            <span  class="close">X</span>
+        </div>
+   <!--Modal secondMenu-->
+   <div class="secondMenu">
+        <p>File</p>
+        <p>Edit</p>
+        <p>View</p>
+        <p>Go</p>
+        <p>Favourites</p>
+        <p>Tools</p>
+        <p>Help</p>
+   </div>
+   <!--Modal Description-->
+   <div class="titleDescription"></div>
+  </div>
+  <section>
+  <img src="images/weather.png" class="weather--icon" style="width:50px;height: 50px;top:15%;position:absolute;;"/>
+    <form>
+         <span class="formClose">X</span>
+        <h3>Find Weather in your City</h3>
+        <input type="text" class="weather--input" placeholder="Type your city"/>
+        <button class="search--btn" type="submit">Search</button>
+        <p class="showCity"></p>
+        <p class="showTemp"></p>
+        <p class="showDesc"></p>
+    </form>
+  </section>
+</main>
+</body>
+</html>
