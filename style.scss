@@ -39,18 +39,18 @@
   position: fixed;
   bottom: 0;
   border: 3px solid white;
+  display: flex; 
+  justify-content: space-between;
 }
 
 //styling footer start button section
 .bottom--start--icon{
   display: flex;
-
   width:100px;
   padding:2px;
   text-align: center;
   align-content: center;
   cursor: pointer;
-
 }
 
 //styling start icon image
@@ -174,4 +174,59 @@ span{
 }
 #menuCloseSpan:hover{
 cursor: pointer;
+}
+#menuCloseSpan{
+    margin-left: 92%; 
+    color:rgb(168, 161, 161);
+    font-weight: bold;
+    font-size: medium;
+}
+.modalBody{
+    display: flex; 
+    justify-content: space-between;
+    background-color:rgba(10,86,180,255);
+}
+form{
+    border:2px dotted black;
+    width:400px;
+
+    padding: 30px;
+    margin-left: 20%;
+    background-color: lightblue;
+    display: none;
+    top:10%;
+    position: absolute;
+    p{
+        font-size: 20px;
+        font-family: cursive;
+        line-height: 3;
+    }
+    input{
+        width:250px;
+        border-radius: 3px;
+        border: 2px solid black;
+        padding: 5px;
+    }
+    button{
+        padding:5px;
+        border-radius: 3px;
+        background-color: black;
+        color:white;
+        cursor: pointer;
+    }
+    h3{
+        font-family: cursive;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    span{
+        color:black;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top:0;
+    }
+
 }

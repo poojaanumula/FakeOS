@@ -24,24 +24,52 @@ closeMenu.addEventListener('click', ()=>{
 
 const showTime = document.querySelector(".showTime")
 
-// Defining Api function..
- const myApi = async()=>{
+
+
+
+//calling form
+const weatherInput = document.querySelector(".weather--input")
+const searchBtn = document.querySelector(".search--btn")
+const form = document.querySelector("form")
+const showCity = document.querySelector(".showCity")
+const showTemp = document.querySelector(".showTemp")
+const showDesc = document.querySelector(".showDesc")
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    
+let city =weatherInput.value;
+const cityName =city.charAt(0).toUpperCase() + city.slice(1).toLowerCase()
+console.log(cityName)
+const myApi = async()=>{
     try{
-        const res = await fetch(`https://timeapi.io/api/time/current/zone?timeZone=Australia%2FSydney`);
+        // https://timeapi.io/api/time/current/zone?timeZone=Australia%2FSydney
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=b684260b3402287eb6ef73bb539697b2`);
         if (!res.ok) {
             throw new Error("Cannot get data");
         }
         const data = await res.json();
-        const finalTime = new Date(data.dateTime).toLocaleTimeString(); // Convert to a readable time format
-        showTime.textContent = finalTime; // Set the time in the HTML
+        console.log(data)
+        showDesc.innerText = `Description: ` +data.weather[0].description;
+        const tempInKel = data.main.temp;
+        const tempInCel = tempInKel-273.15;
+        showTemp.innerText = `Temperature in Celcius: `+tempInCel.toFixed(2);
+        showCity.innerText = data.name + " City";
+        
+        //showTemp.innerText = data.wind.deg;
     }
     catch(error){
-        console.error("Error fetching time:", error);
-        showTime.textContent = "Error fetching time";
+        console.error("Error fetching Data:", error);
+        showDesc.innerText= "Error fetching time";
+
     }
 }
-//Calling API for displaying Time
 myApi()
+})
+
+// Defining Api function..
+
+//Calling API for displaying Time
+
 
 const modal = document.querySelector('.modal')
 const close= document.querySelector('.close')
@@ -57,3 +85,25 @@ function myfunc(a,b){
     modal.style.display= "block"
     titleDisc.textContent = `${b}`
 }
+
+
+//weather app opening.
+
+const weatherImage= document.querySelector('.weather--icon')
+weatherImage.addEventListener('dblclick', ()=>{
+  form.style.display="block"
+})
+
+//input focus
+weatherInput.addEventListener('focus',()=>{
+    weatherInput.value = ""
+    showCity.innerText = ""
+    showDesc.innerText = ""
+    showTemp.innerText = ""
+})
+
+//closing form
+const formClose = document.querySelector('.formClose')
+formClose.addEventListener('click', ()=>{
+    form.style.display="none"
+})

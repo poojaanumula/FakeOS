@@ -13,7 +13,7 @@
         <div class="child">
             <div class="menu">
                 <div class="combined">
-                    <span style="margin-left: 92%; color:rgb(168, 161, 161);font-weight: bold;font-size: medium;" id="menuCloseSpan">x</span>
+                    <span id="menuCloseSpan">x</span>
                     <!-- the blue sidebar-->
                     <div class="menu-bar-side"></div>
                     <!--Menu starts here-->
@@ -61,18 +61,18 @@
                     </div>
                 </div>
             </div>
-             <section class="bottom" style="display: flex; justify-content: space-between;">
+             <section class="bottom">
                    <div class="bottom--start--icon">
                         <img src="./images/start.png" class="bottom--start--icon__image">
                         <p class="bottom--start--icon__text">Start</p>
                    </div>
                   <div class="showTime"></div>
              </section>
-         </div>
+        </div>
     </div>
    <!-- MODAL-->
    <div class="modal">
-        <div style="display: flex; justify-content: space-between;background-color:rgba(10,86,180,255);"> 
+        <div class="modalBody"> 
             <p class="text" ></p>
             <span  class="close">X</span>
         </div>
@@ -89,6 +89,18 @@
    <!--Modal Description-->
    <div class="titleDescription"></div>
   </div>
-   </main>
+  <section>
+  <img src="images/weather.png" class="weather--icon" style="width:50px;height: 50px;top:15%;position:absolute;;"/>
+    <form>
+         <span class="formClose">X</span>
+        <h3>Find Weather in your City</h3>
+        <input type="text" class="weather--input" placeholder="Type your city"/>
+        <button class="search--btn" type="submit">Search</button>
+        <p class="showCity"></p>
+        <p class="showTemp"></p>
+        <p class="showDesc"></p>
+    </form>
+  </section>
+</main>
 </body>
 </html>
